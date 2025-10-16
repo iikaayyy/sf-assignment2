@@ -1,0 +1,78 @@
+<div class="container">
+  <header>
+    <p (click)="reqMode()" class="nav-link">User Requests</p>
+    <p (click)="groupMode()" class="nav-link">Manage Groups</p>
+  </header>
+
+  <div *ngIf="currMode === 'req'" class="requests">
+    <div class="user-requests">
+      <h3>New User Requests</h3>
+
+      <div class="request-row header-row">
+        <div><strong>Username</strong></div>
+        <div><strong>Email</strong></div>
+        <div><strong>Actions</strong></div>
+      </div>
+
+      <div class="requests-grid">
+        <div class="request-row" *ngFor="let request of requests">
+          <div>{{ request.username }}</div>
+          <div>{{ request.email }}</div>
+          <div>
+            <button class="approve" (click)="approveRequest(request)">
+              Approve
+            </button>
+            <button class="reject" (click)="rejectRequest(request)">
+              Reject
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="group-requests">
+      <h3>Group Join Requests</h3>
+
+      <div class="request-row header-row">
+        <div><strong>Username</strong></div>
+        <div><strong>Groupname</strong></div>
+        <div><strong>Actions</strong></div>
+      </div>
+
+      <div class="requests-grid">
+        <div class="request-row" *ngFor="let request of groupRequests">
+          <div>{{ request.username }}</div>
+          <div>{{ request.groupName }}</div>
+          <div>
+            <button class="approve" (click)="approveGroupRequest(request)">
+              Approve
+            </button>
+            <button class="reject" (click)="rejectGroupRequest(request)">
+              Reject
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="all-users">
+      <h3>All users</h3>
+
+      <div class="request-row header-row">
+        <div><strong>Username</strong></div>
+        <div><strong>Email ID</strong></div>
+        <div><strong>Actions</strong></div>
+      </div>
+
+      <div class="requests-grid">
+        <div class="request-row" *ngFor="let user of allUsers">
+          <div>{{ user.username }}</div>
+          <div>{{ user.email }}</div>
+          <div>
+            <button class="reject" (click)="deleteUser(user.id)">DELETE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

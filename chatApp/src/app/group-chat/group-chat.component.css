@@ -1,0 +1,77 @@
+.container {
+  background-color: #f3f3f3;
+  padding-bottom: 1px;
+}
+
+header {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  background-color: #007bff49;
+}
+
+header,
+.rooms {
+  margin-bottom: 30px;
+}
+
+.rooms {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  background-color: #6e9df3;
+  color: white;
+  border: 2px solid black;
+}
+
+.option-container {
+  padding: 10px 20px;
+}
+
+.option-container:first-of-type {
+  border-bottom: 1px solid black;
+  background-color: #3e7beb;
+}
+
+select {
+  border-radius: 3px;
+  border: 1px solid black;
+  padding: 3px 5px;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.rooms button:hover {
+  background-color: #e3e2e2;
+  color: black;
+}
+
+.rooms button {
+  background-color: #f3f3f3;
+  color: black;
+}
+
+.rooms button:active {
+  background-color: #b4b2b2;
+  color: black;
+}
+
+button {
+  padding: 4px 8px;
+  background-color: #d94841;
+  border-radius: 10px;
+  color: #f5f7fa;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d55a53;
+}
+
+button:active {
+  background-color: #cd342c;
+}

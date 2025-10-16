@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="options">
+    <h2>Your Groups</h2>
+    <button *ngIf="!showInput" (click)="showModal()">Create Group</button>
+    <div class="group-input" *ngIf="showInput">
+      <form>
+        <label for="name">Group Name</label>
+        <input
+          id="name"
+          name="name"
+          [(ngModel)]="groupName"
+          placeholder="Name of Group"
+        />
+        <button (click)="onSubmit()">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="group-container">
+    <div
+      (click)="enterGroup(g.name)"
+      class="group"
+      *ngFor="let g of userGroups"
+    >
+      <div class="group-name">
+        <h4>{{ g.name }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <h2>Other Groups</h2>
+
+  <div class="group-container">
+    <div class="group" *ngFor="let g of otherGroups">
+      <div class="group-name">
+        <h4>{{ g.name }}</h4>
+        <button (click)="join(g.name, g.id)">Join</button>
+      </div>
+    </div>
+  </div>
+</div>

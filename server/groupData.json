@@ -1,0 +1,58 @@
+[
+  {
+    "users": [
+      2
+    ],
+    "admins": [
+      1
+    ],
+    "channels": [
+      "Main",
+      "Announcements"
+    ],
+    "id": 1,
+    "name": "Fitness"
+  },
+  {
+    "users": [
+      1,
+      2
+    ],
+    "admins": [
+      1
+    ],
+    "channels": [
+      "Main",
+      "Announcements"
+    ],
+    "id": 2,
+    "name": "Meditation"
+  },
+  {
+    "users": [
+      1,
+      2
+    ],
+    "admins": [
+      1
+    ],
+    "channels": [
+      "Main",
+      "Announcements"
+    ],
+    "id": 3,
+    "name": "Programming"
+  },
+  {
+    "users": [],
+    "admins": [
+      1
+    ],
+    "channels": [
+      "Main",
+      "Announcements"
+    ],
+    "id": 4,
+    "name": "New Group"
+  }
+]

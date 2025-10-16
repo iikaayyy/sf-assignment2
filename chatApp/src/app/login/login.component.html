@@ -1,0 +1,55 @@
+<div class="container">
+  <button (click)="switchMode()">
+    {{ currMode === "login" ? "Sign Up" : "Login" }}
+  </button>
+
+  <div *ngIf="currMode === 'login'" class="login">
+    <h2>Login</h2>
+
+    <form>
+      <div class="label-input">
+        <label for="username">Username</label>
+        <input name="username" [(ngModel)]="username" id="username" />
+      </div>
+
+      <div class="label-input">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          [(ngModel)]="password"
+          id="password"
+        />
+      </div>
+    </form>
+    <button (click)="login()" class="login-btn">LOGIN</button>
+  </div>
+
+  <div *ngIf="currMode !== 'login'" class="signup">
+    <h2>Signup</h2>
+
+    <form>
+      <div class="label-input">
+        <label for="email">Email</label>
+        <input type="email" name="email" [(ngModel)]="email" id="email" />
+      </div>
+      <div class="label-input">
+        <label for="username">Username</label>
+        <input name="username" [(ngModel)]="username" id="username" />
+      </div>
+
+      <div class="label-input">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          [(ngModel)]="password"
+          id="password"
+        />
+      </div>
+    </form>
+    <button (click)="login()" class="login-btn">
+      {{ currMode === "login" ? "login" : "Sign Up" }}
+    </button>
+  </div>
+</div>

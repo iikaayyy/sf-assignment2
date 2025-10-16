@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Your Details</h2>
+  <div class="avatar" (click)="triggerFileInput()">
+    <img
+      class="avatar-img"
+      width="150px"
+      height="150px"
+      [src]="user.avatar"
+      alt="Avatar"
+    />
+  </div>
+
+  <input
+    type="file"
+    #fileInput
+    style="display: none"
+    (change)="onFileSelected($event)"
+    accept="image/*"
+  />
+
+  <p>Username:{{ user.username }}</p>
+  <p>Email:{{ user.email }}</p>
+  <h3>Your Groups</h3>
+  <ol>
+    <li *ngFor="let g of userGroups">{{ g.name }}</li>
+  </ol>
+
+  <button (click)="deleteAccount()">Delete Account</button>
+</div>

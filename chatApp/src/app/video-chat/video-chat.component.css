@@ -1,0 +1,19 @@
+.videos {
+  padding: 15px 20px;
+  background-color: antiquewhite;
+  display: flex;
+  gap: 30px;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  border: 1px solid black;
+  width: 250px;
+  height: 250px;
+}

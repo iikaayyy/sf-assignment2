@@ -1,0 +1,19 @@
+<div class="container">
+  <header>
+    <h4>Group Options</h4>
+    <button (click)="leaveGroup()">Leave Group</button>
+  </header>
+
+  <div class="rooms">
+    <div class="option-container">
+      <h3>Select a channel to chat in</h3>
+    </div>
+
+    <div class="option-container">
+      <select [(ngModel)]="selectedChannel">
+        <option *ngFor="let c of currGroup?.channels">{{ c }}</option>
+      </select>
+      <button (click)="joinChannel()">JOIN</button>
+    </div>
+  </div>
+</div>

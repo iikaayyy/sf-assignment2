@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  /* padding: 0; */
+  /* color: #f5f7fa; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.videos {
+  padding: 15px 20px;
+  background-color: antiquewhite;
+  display: flex;
+  gap: 30px;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  border: 1px solid black;
+  width: 250px;
+  height: 250px;
+}

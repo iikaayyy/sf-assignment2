@@ -1,0 +1,32 @@
+Group
+
+    collection of users (need permission from group admin or super admin to be a member)
+
+    Has several channels for purpose of chatting
+
+
+Super admin
+    Can promote a chat user to group admin
+
+    remove chat users
+
+    upgrade chat user to super admin role
+
+    has all the functions of a group admin
+
+
+Group admin
+    Can create groups
+    Can create channels within groups
+    Can remove groups, channles and chat users from groups they administer
+
+Chat user
+    A user of the system can create a chat user
+    Be able to join any channel once member of a group
+    Register interest a group and be added by the group admin
+    Leave a group
+    Delete themselves
+    uniquely identified
+    May logout
+
+

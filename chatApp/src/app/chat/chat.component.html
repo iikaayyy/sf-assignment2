@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="channel-chat">
+    <div class="channel-details">
+      <h3>Channel Name</h3>
+      <p class="channel-name">{{ channelName }}</p>
+
+      <h4>Users</h4>
+      <ul>
+        <li *ngFor="let u of activeUsers">{{ u }} 🟢</li>
+      </ul>
+    </div>
+    <div class="chat-box">
+      <div class="options">
+        <button (click)="startVideoChat()">Video Chat 📹</button>
+        <button (click)="leaveChannel()" class="leave">Leave Channel</button>
+      </div>
+
+      <div class="messages">
+        <div
+          class="msg"
+          *ngFor="let msg of messages"
+          [ngClass]="{
+            self: msg.username === currUser.username,
+            status: msg.type === 'status',
+            image: msg.type === 'image'
+          }"
+        >
+          <p class="time">{{ msg.username }} at {{ msg.time }}</p>
+
+          <div class="msg-content">
+            <div class="profile">
+              <img
+                [src]="msg.avatar"
+                width="50"
+                height="50"
+                class="profile-img"
+              />
+            </div>
+            <p *ngIf="msg.type !== 'image'" class="msg-text">
+              {{ msg.content }}
+            </p>
+
+            <img
+              [src]="msg.content"
+              alt="Image message"
+              *ngIf="msg.type === 'image'"
+              class="chat-image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input
+      class="chat-input-box"
+      [(ngModel)]="msgText"
+      placeholder="Type your message"
+      (keydown)="checkEnter($event)"
+    />
+    <input
+      type="file"
+      accept="image/*"
+      class="file-upload"
+      (change)="onImageSelected($event)"
+    />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>
