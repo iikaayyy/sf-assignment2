@@ -25,7 +25,7 @@ const usernameAvailable = (arr, username) =>
   arr.find((el) => el.username === username);
 
 users.push(createUser("super", "123", "super@super.com", "SU"));
-users.push(createUser("yashee", "123", "y@y.com", "GA"));
+users.push(createUser("Ishan", "123", "ish@test.com", "GA"));
 users.push(createUser("john", "123", "j@j.com", "CA"));
 
 // console.log("users.js", readJSONFile("userData.json"));

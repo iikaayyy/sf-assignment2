@@ -1,9 +1,11 @@
 <div class="container">
+  <!-- Tabs -->
   <header>
-    <p (click)="reqMode()" class="nav-link">User Requests</p>
+    <p (click)="reqMode()"   class="nav-link">User Requests</p>
     <p (click)="groupMode()" class="nav-link">Manage Groups</p>
   </header>
 
+  <!-- =================== USER REQUESTS (existing) =================== -->
   <div *ngIf="currMode === 'req'" class="requests">
     <div class="user-requests">
       <h3>New User Requests</h3>
@@ -74,5 +76,29 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- =================== MANAGE GROUPS (new) =================== -->
+  <div *ngIf="currMode === 'group'" class="manage-groups" style="padding-top:12px;">
+    <h3>Manage Groups</h3>
+
+    <!-- loading / error / empty states -->
+    <div *ngIf="loadingGroups" class="muted">Loading groups…</div>
+    <div *ngIf="groupsError" class="error">{{ groupsError }}</div>
+    <div *ngIf="!loadingGroups && !groupsError && groups?.length === 0" class="muted">
+      No groups found.
+    </div>
+
+    <!-- groups list -->
+    <ul *ngIf="!loadingGroups && !groupsError && groups?.length">
+      <li *ngFor="let g of groups" style="margin:8px 0;">
+        <strong>{{ g.name }}</strong>
+        <span class="muted">
+          • id: {{ g.id }}
+          • channels: {{ g.channels?.length || 0 }}
+          • members: {{ g.users?.length || 0 }}
+        </span>
+      </li>
+    </ul>
   </div>
 </div>

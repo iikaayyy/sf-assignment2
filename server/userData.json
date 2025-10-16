@@ -20,13 +20,14 @@
     ],
     "groups": [
       1,
-      2
+      2,
+      3
     ],
-    "username": "yashee",
+    "username": "Ishan",
     "password": "123",
-    "email": "y@y.com",
+    "email": "ish@test.com",
     "id": 2,
-    "avatar": "http://localhost:3000/avatars/user2.png"
+    "avatar": "http://localhost:3000/avatars/default.png"
   },
   {
     "roles": [
@@ -39,17 +40,6 @@
     "password": "123",
     "email": "j@j.com",
     "id": 3,
-    "avatar": "http://localhost:3000/avatars/default.png"
-  },
-  {
-    "roles": [
-      "CA"
-    ],
-    "groups": [],
-    "username": "kaile",
-    "password": "123",
-    "email": "kaile@k.com",
-    "id": 4,
     "avatar": "http://localhost:3000/avatars/default.png"
   }
 ]
